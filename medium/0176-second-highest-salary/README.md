@@ -61,16 +61,15 @@ Output:
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 105 ms  
-**Memory:** 0B  
-**Submitted:** 2026-08-08T14:24:59.761Z  
+**Runtime:** 462 ms (beats 6.54%)  
+**Memory:** 0B (beats 100.00%)  
+**Submitted:** 2026-08-08T14:25:47.971Z  
 
 ```sql
 # Write your MySQL query statement below
-SELECT p.firstName , p.lastName , a.city ,a.state
-FROM Person p 
-left join Address a 
-on p.personId = a.personId ;
+SELECT MAX(salary) as SecondHighestSalary 
+FROM Employee
+WHERE salary < (SELECT MAX(salary) FROM Employee);
 ```
 
 ---
