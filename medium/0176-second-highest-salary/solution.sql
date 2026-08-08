@@ -1,5 +1,4 @@
 # Write your MySQL query statement below
-SELECT p.firstName , p.lastName , a.city ,a.state
-FROM Person p 
-left join Address a 
-on p.personId = a.personId ;
+SELECT MAX(salary) as SecondHighestSalary 
+FROM Employee
+WHERE salary < (SELECT MAX(salary) FROM Employee);
