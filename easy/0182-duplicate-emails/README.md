@@ -47,16 +47,17 @@ Explanation: a@b.com is repeated two times.
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 89 ms  
-**Memory:** 0B  
-**Submitted:** 2026-08-09T07:11:21.383Z  
+**Runtime:** 399 ms (beats 56.16%)  
+**Memory:** 0B (beats 100.00%)  
+**Submitted:** 2026-08-09T07:11:36.366Z  
 
 ```sql
 # Write your MySQL query statement below
-SELECT e.name as Employee from Employee e
-JOIN Employee m 
-on e.managerId = m.id
-WHERE e.salary > m.salary;
+SELECT email as Email
+FROM Person
+GROUP BY email
+HAVING COUNT(email) > 1;
+
 ```
 
 ---
