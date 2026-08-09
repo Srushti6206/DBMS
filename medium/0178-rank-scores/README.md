@@ -60,25 +60,16 @@ Output:
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 77 ms  
-**Memory:** 0B  
-**Submitted:** 2026-08-09T06:42:28.404Z  
+**Runtime:** 360 ms (beats 37.84%)  
+**Memory:** 0B (beats 100.00%)  
+**Submitted:** 2026-08-09T06:42:43.263Z  
 
 ```sql
-CREATE FUNCTION getNthHighestSalary(N INT) RETURNS INT
-BEGIN
-  RETURN (
-      # Write your MySQL query statement below.
-    SELECT MAX(salary)
-        FROM Employee e1
-        WHERE (
-            SELECT COUNT(DISTINCT e2.salary)
-            FROM Employee e2
-            WHERE e2.salary > e1.salary
-        ) = N - 1
-  );
-END
-
+# Write your MySQL query statement below
+SELECT score,
+DENSE_RANK() OVER (ORDER BY score DESC) AS 'rank'
+FROM Scores
+ORDER BY score DESC;
 ```
 
 ---
