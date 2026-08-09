@@ -63,25 +63,24 @@ Output:
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 110 ms  
-**Memory:** 0B  
-**Submitted:** 2026-08-09T06:35:02.890Z  
+**Runtime:** 908 ms (beats 5.02%)  
+**Memory:** 0B (beats 100.00%)  
+**Submitted:** 2026-08-09T06:35:16.974Z  
 
 ```sql
-CREATE FUNCTION getNthHighestSalary(N INT) RETURNS INT
+CREATE FUNCTION getNthHighestSalary(N INT) RETURNS INT
 BEGIN
-  RETURN (
-      # Write your MySQL query statement below.
-    SELECT MAX(salary)
-        FROM Employee e1
-        WHERE (
-            SELECT COUNT(DISTINCT e2.salary)
-            FROM Employee e2
-            WHERE e2.salary > e1.salary
-        ) = N - 1
-  );
+  RETURN (
+      # Write your MySQL query statement below.
+    SELECT MAX(salary)
+        FROM Employee e1
+        WHERE (
+            SELECT COUNT(DISTINCT e2.salary)
+            FROM Employee e2
+            WHERE e2.salary > e1.salary
+        ) = N - 1
+  );
 END
-
 
 ```
 
