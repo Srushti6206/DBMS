@@ -70,17 +70,17 @@ Output:
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 84 ms  
-**Memory:** 0B  
-**Submitted:** 2026-08-09T07:18:10.944Z  
+**Runtime:** 634 ms (beats 36.42%)  
+**Memory:** 0B (beats 100.00%)  
+**Submitted:** 2026-08-09T07:18:24.711Z  
 
 ```sql
 # Write your MySQL query statement below
-SELECT email as Email
-FROM Person
-GROUP BY email
-HAVING COUNT(email) > 1;
-
+SELECT c.name as Customers 
+FROM Customers c
+LEFT JOIN Orders o 
+ON c.id = o.customerId
+where o.customerId IS NULL;
 ```
 
 ---
