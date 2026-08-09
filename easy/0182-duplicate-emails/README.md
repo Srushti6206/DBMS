@@ -47,9 +47,9 @@ Explanation: a@b.com is repeated two times.
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 63 ms  
+**Runtime:** 89 ms  
 **Memory:** 0B  
-**Submitted:** 2026-08-09T07:10:21.883Z  
+**Submitted:** 2026-08-09T07:11:21.383Z  
 
 ```sql
 # Write your MySQL query statement below
