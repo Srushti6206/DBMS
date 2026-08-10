@@ -75,17 +75,21 @@ Explanation: Max and Jim both have the highest salary in the IT department and H
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 110 ms  
-**Memory:** 0B  
-**Submitted:** 2026-08-10T17:07:02.803Z  
+**Runtime:** 1031 ms (beats 26.72%)  
+**Memory:** 0B (beats 100.00%)  
+**Submitted:** 2026-08-10T17:07:33.637Z  
 
 ```sql
 # Write your MySQL query statement below
-DELETE p1 
-FROM Person p1
-JOIN Person p2
- ON p1.email = p2.email
- where p1.id > p2.id;
+SELECT d.name as Department , 
+e.name as Employee , e.salary as Salary
+FROM Employee e
+JOIN Department d
+ON e.departmentId = d.id
+where salary  = (SELECT MAX(e2.salary) FROM Employee e2
+where e2.departmentId = e.departmentId );
+
+  
 ```
 
 ---
