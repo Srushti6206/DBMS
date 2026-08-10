@@ -52,18 +52,17 @@ Explanation: john@example.com is repeated two times. We keep the row with the sm
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 89 ms  
-**Memory:** 0B  
-**Submitted:** 2026-08-10T16:52:28.091Z  
+**Runtime:** 1020 ms (beats 20.55%)  
+**Memory:** 0B (beats 100.00%)  
+**Submitted:** 2026-08-10T16:52:51.209Z  
 
 ```sql
-# Write your MySQL query statement below
-DELETE p1 
-FROM Person p1
-JOIN Person p2
- ON p1.email = p2.email
- where p1.id > p2.id;
-
+# Write your MySQL query statement below
+DELETE p1 
+FROM Person p1
+JOIN Person p2
+ ON p1.email = p2.email
+ where p1.id > p2.id;
 ```
 
 ---
