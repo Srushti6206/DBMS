@@ -78,14 +78,14 @@ Output:
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 108 ms  
+**Runtime:** 87 ms  
 **Memory:** 0B  
-**Submitted:** 2026-08-11T17:11:05.206Z  
+**Submitted:** 2026-08-11T17:11:46.690Z  
 
 ```sql
 # Write your MySQL query statement below
-SELECT e.name , b.bonus as Bonus FROM Employee e
-LEFT JOIN Bonus b 
+SELECT e.name , b.bonus FROM Employee e
+RIGHT JOIN Bonus b 
 on e.empId = b.empId
 where b.bonus < 1000;
 
