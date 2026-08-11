@@ -78,17 +78,16 @@ Output:
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 144 ms  
-**Memory:** 0B  
-**Submitted:** 2026-08-11T17:14:19.629Z  
+**Runtime:** 1906 ms (beats 5.01%)  
+**Memory:** 0B (beats 100.00%)  
+**Submitted:** 2026-08-11T17:14:37.756Z  
 
 ```sql
-# Write your MySQL query statement below
-SELECT e.name , b.bonus FROM Employee e
-LEFT JOIN Bonus b 
-on e.empId = b.empId
-where b.bonus < 1000 OR b.bonus is NULL;
-
+# Write your MySQL query statement below
+SELECT e.name , b.bonus FROM Employee e
+LEFT JOIN Bonus b 
+on e.empId = b.empId
+where b.bonus < 1000 OR b.bonus is NULL;
 ```
 
 ---
