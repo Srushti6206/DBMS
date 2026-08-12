@@ -53,16 +53,15 @@ Output:
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 97 ms  
-**Memory:** 0B  
-**Submitted:** 2026-08-12T12:42:36.925Z  
+**Runtime:** 556 ms (beats 34.80%)  
+**Memory:** 0B (beats 100.00%)  
+**Submitted:** 2026-08-12T12:43:57.840Z  
 
 ```sql
-# Write your MySQL query statement below
-SELECT player_id , min(event_date) as first_login 
-from Activity 
-group by player_id ;
-
+# Write your MySQL query statement below
+SELECT player_id , min(event_date) as first_login 
+from Activity 
+group by player_id ;
 ```
 
 ---
