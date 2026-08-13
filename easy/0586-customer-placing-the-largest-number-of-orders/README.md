@@ -54,17 +54,17 @@ Follow up: What if more than one customer has the largest number of orders, can 
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 84 ms  
-**Memory:** 0B  
-**Submitted:** 2026-08-13T14:38:16.078Z  
+**Runtime:** 500 ms (beats 51.42%)  
+**Memory:** 0B (beats 100.00%)  
+**Submitted:** 2026-08-13T14:38:39.270Z  
 
 ```sql
-# Write your MySQL query statement below
-SELECT customer_number FROM Orders
-group by customer_number 
-order by count(*) desc
-limit 1 ;
-
+# Write your MySQL query statement below
+SELECT customer_number 
+FROM Orders
+group by customer_number 
+order by count(*) desc
+limit 1 ;
 ```
 
 ---
