@@ -56,16 +56,16 @@ Explanation:
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 298 ms (beats 22.37%)  
+**Runtime:** 346 ms (beats 10.64%)  
 **Memory:** 0B (beats 100.00%)  
-**Submitted:** 2026-08-14T17:58:11.396Z  
+**Submitted:** 2026-08-14T17:58:29.210Z  
 
 ```sql
 # Write your MySQL query statement below
 UPDATE Salary
 SET sex = CASE
-    WHEN sex = 'm' THEN 'f'
-    ELSE 'm'
+WHEN sex = 'm' THEN 'f'
+ELSE 'm'
 END;
 ```
 
