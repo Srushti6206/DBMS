@@ -1,9 +1,9 @@
 # Write your MySQL query statement below
-select s.name from
-SalesPerson s 
-join Company c 
-join orders o
-    on s.sales_id = o.sales_id
-    on c.com_id=o.com_id
-    where c.name <> 'RED' or
-         c.name is null;
+SELECT s.name
+FROM SalesPerson s
+LEFT JOIN Orders o
+    ON s.sales_id = o.sales_id
+LEFT JOIN Company c
+    ON o.com_id = c.com_id
+WHERE c.name <> 'RED'
+   OR c.name IS NULL;
