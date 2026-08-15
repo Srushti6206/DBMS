@@ -107,20 +107,20 @@ According to orders 3 and 4 in the Orders table, it is easy to tell that only sa
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 144 ms  
+**Runtime:** 152 ms  
 **Memory:** 0B  
-**Submitted:** 2026-08-15T12:09:49.565Z  
+**Submitted:** 2026-08-15T12:11:13.464Z  
 
 ```sql
 # Write your MySQL query statement below
-select s.name from
-SalesPerson s 
-join Company c 
-join orders o
-    on s.sales_id = o.sales_id
-    on c.com_id=o.com_id
-    where c.name <> 'RED' or
-         c.name is null;
+SELECT s.name
+FROM SalesPerson s
+LEFT JOIN Orders o
+    ON s.sales_id = o.sales_id
+LEFT JOIN Company c
+    ON o.com_id = c.com_id
+WHERE c.name <> 'RED'
+   OR c.name IS NULL;
 
 ```
 
