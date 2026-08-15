@@ -59,17 +59,16 @@ Output:
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 71 ms  
-**Memory:** 0B  
-**Submitted:** 2026-08-13T14:47:47.544Z  
+**Runtime:** 338 ms (beats 27.67%)  
+**Memory:** 0B (beats 100.00%)  
+**Submitted:** 2026-08-15T12:02:00.307Z  
 
 ```sql
 # Write your MySQL query statement below
-select customer_number 
-from Orders
-group by customer_number 
-order by count(*) desc
-limit 1 ;
+SELECT name ,population ,area 
+FROM World
+where area >= 3000000 
+    or population>=25000000;
 ```
 
 ---
