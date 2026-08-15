@@ -5,4 +5,5 @@ join Company c 
 join orders o
     on s.sales_id = o.sales_id
     on c.com_id=o.com_id
-    where c.name <> 'RED';
+    where c.name <> 'RED' or
+         c.name is null;
