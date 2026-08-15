@@ -107,9 +107,9 @@ According to orders 3 and 4 in the Orders table, it is easy to tell that only sa
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 139 ms  
+**Runtime:** 144 ms  
 **Memory:** 0B  
-**Submitted:** 2026-08-15T12:09:01.478Z  
+**Submitted:** 2026-08-15T12:09:49.565Z  
 
 ```sql
 # Write your MySQL query statement below
@@ -119,7 +119,8 @@ join Company c 
 join orders o
     on s.sales_id = o.sales_id
     on c.com_id=o.com_id
-    where c.name <> 'RED';
+    where c.name <> 'RED' or
+         c.name is null;
 
 ```
 
