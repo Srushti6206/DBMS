@@ -107,17 +107,16 @@ According to orders 3 and 4 in the Orders table, it is easy to tell that only sa
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 128 ms  
+**Runtime:** 159 ms  
 **Memory:** 0B  
-**Submitted:** 2026-08-15T12:26:41.716Z  
+**Submitted:** 2026-08-15T12:28:52.679Z  
 
 ```sql
 # Write your MySQL query statement below
 SELECT s.name
 FROM SalesPerson s
 WHERE NOT EXISTS (
-    SELECT 1
-    FROM Orders o
+    SELECT * FROM Orders o
     JOIN Company c
         ON o.com_id = c.com_id
     WHERE o.sales_id = s.sales_id
