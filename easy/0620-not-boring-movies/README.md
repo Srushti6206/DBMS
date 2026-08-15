@@ -54,14 +54,15 @@ We have three movies with odd-numbered IDs: 1, 3, and 5. The movie with ID = 3 i
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 68 ms  
+**Runtime:** 87 ms  
 **Memory:** 0B  
-**Submitted:** 2026-08-15T11:58:40.495Z  
+**Submitted:** 2026-08-15T11:59:31.095Z  
 
 ```sql
 # Write your MySQL query statement below
 SELECT * FROM Cinema 
-WHERE id % 2 <> 0
+WHERE id % 2 <> 0 
+AND description <> 'boring'
 ORDER BY id DESC;
 
 ```
