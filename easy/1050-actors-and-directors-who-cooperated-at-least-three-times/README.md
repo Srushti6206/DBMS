@@ -51,17 +51,16 @@ Explanation: The only pair is (1, 1) where they cooperated exactly 3 times.
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 81 ms  
-**Memory:** 0B  
-**Submitted:** 2026-08-17T16:41:38.132Z  
+**Runtime:** 391 ms (beats 56.48%)  
+**Memory:** 0B (beats 100.00%)  
+**Submitted:** 2026-08-17T16:42:02.062Z  
 
 ```sql
-# Write your MySQL query statement below
-SELECT actor_id , director_id 
-FROM ActorDirector
-GROUP BY actor_id , director_id
-HAVING COUNT(*) >= 3 ;
-
+# Write your MySQL query statement below
+SELECT actor_id , director_id 
+FROM ActorDirector
+GROUP BY actor_id , director_id
+HAVING COUNT(*) >= 3 ;
 ```
 
 ---
