@@ -57,17 +57,17 @@ Explanation:
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 72 ms  
+**Runtime:** 83 ms  
 **Memory:** 0B  
-**Submitted:** 2026-08-13T14:52:32.402Z  
+**Submitted:** 2026-08-17T16:37:37.117Z  
 
 ```sql
-# Write your MySQL query statement below
-select customer_number 
-from Orders
-group by customer_number 
-order by count(*) desc
-limit 1 ;
+# Write your MySQL query statement below
+SELECT class FROM Courses
+GROUP BY class
+HAVING COUNT(class) >= 5;
+
+
 ```
 
 ---
