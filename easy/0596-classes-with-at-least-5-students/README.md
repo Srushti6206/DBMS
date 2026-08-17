@@ -57,16 +57,15 @@ Explanation:
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 83 ms  
-**Memory:** 0B  
-**Submitted:** 2026-08-17T16:37:37.117Z  
+**Runtime:** 350 ms (beats 53.69%)  
+**Memory:** 0B (beats 100.00%)  
+**Submitted:** 2026-08-17T16:37:46.071Z  
 
 ```sql
-# Write your MySQL query statement below
-SELECT class FROM Courses
-GROUP BY class
-HAVING COUNT(class) >= 5;
-
+# Write your MySQL query statement below
+SELECT class FROM Courses
+GROUP BY class
+HAVING COUNT(class) >= 5;
 
 ```
 
