@@ -1,6 +1,5 @@
-# Write your MySQL query statement below
-select customer_number 
-from Orders
-group by customer_number 
-order by count(*) desc
-limit 1 ;
+# Write your MySQL query statement below
+SELECT class FROM Courses
+GROUP BY class
+HAVING COUNT(class) >= 5;
+
