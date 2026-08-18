@@ -1,4 +1,3 @@
-    SUM(CASE WHEN month = 'May' THEN revenue ELSE 0 END) AS May_Revenue,
     SUM(CASE WHEN month = 'Jun' THEN revenue ELSE 0 END) AS Jun_Revenue,
     SUM(CASE WHEN month = 'Jul' THEN revenue ELSE 0 END) AS Jul_Revenue,
     SUM(CASE WHEN month = 'Aug' THEN revenue ELSE 0 END) AS Aug_Revenue,
@@ -6,5 +5,5 @@
     SUM(CASE WHEN month = 'Oct' THEN revenue ELSE 0 END) AS Oct_Revenue,
     SUM(CASE WHEN month = 'Nov' THEN revenue ELSE 0 END) AS Nov_Revenue,
     SUM(CASE WHEN month = 'Dec' THEN revenue ELSE 0 END) AS Dec_Revenue
-
-    FROM Department ;
+    FROM Department
+    GROUP BY id ;
