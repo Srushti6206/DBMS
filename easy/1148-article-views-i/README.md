@@ -54,14 +54,15 @@ Output:
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 108 ms  
+**Runtime:** 76 ms  
 **Memory:** 0B  
-**Submitted:** 2026-08-18T14:38:04.425Z  
+**Submitted:** 2026-08-18T14:38:34.639Z  
 
 ```sql
 # Write your MySQL query statement below
 SELECT distinct author_id as id FROM Views
-where author_id = viewer_id ;
+where author_id = viewer_id
+order by id ;
 
 ```
 
