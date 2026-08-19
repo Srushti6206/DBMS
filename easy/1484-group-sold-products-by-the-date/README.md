@@ -58,21 +58,18 @@ For 2020-06-02, the Sold item is (Mask), we just return it.
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 75 ms  
-**Memory:** 0B  
-**Submitted:** 2026-08-19T14:15:46.310Z  
+**Runtime:** 582 ms (beats 17.52%)  
+**Memory:** 0B (beats 100.00%)  
+**Submitted:** 2026-08-19T14:16:37.450Z  
 
 ```sql
 # Write your MySQL query statement below
-SELECT p.product_name,
-    SUM(o.unit) as unit
-FROM Products p
-JOIN Orders o
-    ON p.product_id = o.product_id
-WHERE o.order_date >= '2020-02-01'
-AND o.order_date < '2020-03-01'
-GROUP BY p.product_id, p.product_name
-HAVING SUM(o.unit) >= 100;
+SELECT sell_date , 
+COUNT(DISTINCT PRODUCT) AS num_sold , 
+GROUP_CONCAT(DISTINCT PRODUCT ORDER BY PRODUCT) AS products
+FROM Activities
+GROUP BY sell_date
+ORDER BY sell_date ;
 ```
 
 ---
