@@ -89,22 +89,21 @@ Products with product_id = 5 is ordered in February a total of (50 + 50) = 100.
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 771 ms  
-**Memory:** 0B  
-**Submitted:** 2026-08-19T14:11:49.113Z  
+**Runtime:** 966 ms (beats 18.59%)  
+**Memory:** 0B (beats 100.00%)  
+**Submitted:** 2026-08-19T14:11:56.715Z  
 
 ```sql
-# Write your MySQL query statement below
-SELECT p.product_name,
-    SUM(o.unit) as unit
-FROM Products p
-JOIN Orders o
-    ON p.product_id = o.product_id
-WHERE o.order_date >= '2020-02-01'
-AND o.order_date < '2020-03-01'
-GROUP BY p.product_id, p.product_name
-HAVING SUM(o.unit) >= 100;
-
+# Write your MySQL query statement below
+SELECT p.product_name,
+    SUM(o.unit) as unit
+FROM Products p
+JOIN Orders o
+    ON p.product_id = o.product_id
+WHERE o.order_date >= '2020-02-01'
+AND o.order_date < '2020-03-01'
+GROUP BY p.product_id, p.product_name
+HAVING SUM(o.unit) >= 100;
 ```
 
 ---
