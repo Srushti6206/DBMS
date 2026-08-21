@@ -62,15 +62,16 @@ For 2020-12-7, toyota gets leads = [0] and partners = [1, 2] while honda gets le
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 84 ms  
+**Runtime:** 92 ms  
 **Memory:** 0B  
-**Submitted:** 2026-08-21T11:15:20.815Z  
+**Submitted:** 2026-08-21T11:15:47.836Z  
 
 ```sql
 # Write your MySQL query statement below
 SELECT date_id, make_name,COUNT(DISTINCT lead_id) as unique_leads ,
 COUNT(DISTINCT partner_id) as unique_partners
-FROM DailySales ;
+FROM DailySales 
+GROUP BY date_id;
 
 ```
 
