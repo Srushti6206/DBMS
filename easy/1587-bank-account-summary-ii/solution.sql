@@ -1,5 +1,6 @@
 # Write your MySQL query statement below
-SELECT u.name , SUM(t.account) as balance
+SELECT u.name , SUM(t.amount) as balance
 FROM Users u
 JOIN Transactions t
-ON u.account = t.account ;
+ON u.account = t.account 
+Group by t.amount;
