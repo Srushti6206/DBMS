@@ -81,18 +81,18 @@ Charlie's balance is (6000 + 6000 - 4000) = 8000.
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 89 ms  
+**Runtime:** 126 ms  
 **Memory:** 0B  
-**Submitted:** 2026-08-21T10:58:57.956Z  
+**Submitted:** 2026-08-21T11:02:12.918Z  
 
 ```sql
 # Write your MySQL query statement below
-SELECT u.name , SUM(t.amount) as balance
+SELECT u.name , SUM(t.amount) AS balance
 FROM Users u
 JOIN Transactions t
-ON u.account = t.account 
-Group by t.amount
-HAVING SUM(t.amount)>10000;
+ON u.account = t.account
+GROUP BY u.account
+HAVING SUM(t.amount) > 10000;
 
 ```
 
