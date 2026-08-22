@@ -79,9 +79,9 @@ The unique ID of Jonathan is 1.
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 95 ms  
+**Runtime:** 98 ms  
 **Memory:** 0B  
-**Submitted:** 2026-08-22T14:33:39.587Z  
+**Submitted:** 2026-08-22T14:32:39.503Z  
 
 ```sql
 # Write your MySQL query statement below
