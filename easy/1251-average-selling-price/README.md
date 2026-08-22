@@ -79,9 +79,9 @@ Average selling price for product 2 = ((200 * 15) + (30 * 30)) / 230 = 16.96
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 92 ms  
+**Runtime:** 124 ms  
 **Memory:** 0B  
-**Submitted:** 2026-08-22T14:54:46.694Z  
+**Submitted:** 2026-08-22T14:55:37.714Z  
 
 ```sql
 # Write your MySQL query statement below
