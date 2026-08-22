@@ -84,20 +84,16 @@ As we can see, users with IDs 30 and 96 visited the mall one time without making
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 1562 ms (beats 42.77%)  
-**Memory:** 0B (beats 100.00%)  
-**Submitted:** 2026-08-22T14:46:29.829Z  
+**Runtime:** 114 ms  
+**Memory:** 0B  
+**Submitted:** 2026-08-22T14:42:22.362Z  
 
 ```sql
 # Write your MySQL query statement below
-SELECT v.customer_id , COUNT(*) as count_no_trans
-FROM Visits v
-LEFT JOIN Transactions t
-ON v.visit_id = t.visit_id 
-WHERE t.transaction_id IS NULL
-GROUP BY v.customer_id ;
-
-
+SELECT u.unique_id, e.name
+FROM Employees e
+LEFT JOIN EmployeeUNI u
+ON e.id = u.id;
 ```
 
 ---
