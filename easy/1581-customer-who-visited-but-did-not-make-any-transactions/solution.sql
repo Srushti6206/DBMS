@@ -1,5 +1,8 @@
 # Write your MySQL query statement below
-SELECT u.unique_id, e.name
-FROM Employees e
-LEFT JOIN EmployeeUNI u
-ON e.id = u.id;
+SELECT v.customer_id , COUNT(*) as count_no_trans
+FROM Visits v
+LEFT JOIN Transactions t
+ON v.visit_id = t.visit_id 
+WHERE t.transaction_id IS NULL
+GROUP BY v.customer_id ;
+
