@@ -58,14 +58,15 @@ Output:
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 612 ms (beats 17.76%)  
-**Memory:** 0B (beats 100.00%)  
-**Submitted:** 2026-08-12T12:35:49.215Z  
+**Runtime:** 2680 ms  
+**Memory:** 0B  
+**Submitted:** 2026-08-22T14:25:38.519Z  
 
 ```sql
 # Write your MySQL query statement below
-SELECT name from Customer 
-WHERE referee_id <> 2 OR referee_id is NULL;
+SELECT product_id FROM Products
+WHERE low_fats = 'Y' AND 
+recyclable = 'Y';
 ```
 
 ---
