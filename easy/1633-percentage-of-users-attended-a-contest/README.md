@@ -85,21 +85,19 @@ Bob registered in contest 207 and the percentage is ((1/3) * 100) = 33.33%
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 93 ms  
-**Memory:** 0B  
-**Submitted:** 2026-08-22T15:30:45.642Z  
+**Runtime:** 1072 ms (beats 50.54%)  
+**Memory:** 0B (beats 100.00%)  
+**Submitted:** 2026-08-22T15:30:53.920Z  
 
 ```sql
 # Write your MySQL query statement below
-SELECT p.product_id , ROUND(COALESCE(SUM(p.price*u.units)/SUM(u.units) ,0),2) AS average_price
-FROM Prices p 
-LEFT JOIN UnitsSold u
-ON p.product_id = u.product_id 
-AND u.purchase_date BETWEEN p.start_date AND p.end_date
-GROUP BY p.product_id ;
+SELECT contest_id ,
+    ROUND(COUNT(DISTINCT user_id) * 100 /(SELECT COUNT(*) FROM Users),2) 
+    AS percentage
+FROM Register
+GROUP BY contest_id
+ORDER BY percentage DESC , contest_id ASC ;
 
-
- 
 ```
 
 ---
