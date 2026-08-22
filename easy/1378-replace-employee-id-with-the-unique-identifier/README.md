@@ -79,15 +79,16 @@ The unique ID of Jonathan is 1.
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 98 ms  
-**Memory:** 0B  
-**Submitted:** 2026-08-22T14:32:39.503Z  
+**Runtime:** 1381 ms (beats 43.24%)  
+**Memory:** 0B (beats 100.00%)  
+**Submitted:** 2026-08-22T14:33:48.872Z  
 
 ```sql
 # Write your MySQL query statement below
-SELECT product_id FROM Products
-WHERE low_fats = 'Y' AND 
-recyclable = 'Y';
+SELECT u.unique_id, e.name
+FROM Employees e
+LEFT JOIN EmployeeUNI u
+ON e.id = u.id;
 ```
 
 ---
