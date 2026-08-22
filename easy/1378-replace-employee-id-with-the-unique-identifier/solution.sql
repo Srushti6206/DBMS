@@ -1,5 +1,4 @@
 # Write your MySQL query statement below
-SELECT u.unique_id, e.name
-FROM Employees e
-LEFT JOIN EmployeeUNI u
-ON e.id = u.id;
+SELECT product_id FROM Products
+WHERE low_fats = 'Y' AND 
+recyclable = 'Y';
