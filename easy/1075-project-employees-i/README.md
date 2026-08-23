@@ -75,9 +75,9 @@ Explanation: The average experience years for the first project is (3 + 2 + 1) /
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 1007 ms (beats 5.00%)  
+**Runtime:** 548 ms (beats 61.16%)  
 **Memory:** 0B (beats 100.00%)  
-**Submitted:** 2026-08-17T16:50:42.097Z  
+**Submitted:** 2026-08-23T09:52:04.711Z  
 
 ```sql
 # Write your MySQL query statement below
