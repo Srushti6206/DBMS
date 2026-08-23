@@ -75,20 +75,23 @@ Machine 2's average time is ((4.512 - 4.100) + (5.000 - 2.500)) / 2 = 1.456
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 78 ms  
-**Memory:** 0B  
-**Submitted:** 2026-08-23T10:29:50.295Z  
+**Runtime:** 290 ms (beats 33.86%)  
+**Memory:** 0B (beats 100.00%)  
+**Submitted:** 2026-08-23T10:29:57.393Z  
 
 ```sql
 # Write your MySQL query statement below
-SELECT query_name ,
-ROUND(AVG(rating/position),2) AS quality ,
-ROUND(AVG(CASE
-                WHEN rating < 3 THEN 1
-                ELSE 0
-            END) * 100, 2) AS poor_query_percentage
-FROM Queries
-GROUP BY query_name ;
+SELECT a1.machine_id,
+    ROUND(AVG(a2.timestamp - a1.timestamp) , 3) AS processing_time
+FROM Activity a1
+JOIN Activity a2
+    ON a1.machine_id = a2.machine_id
+    AND a1.process_id = a2.process_id
+    AND a1.activity_type = 'start'
+    AND a2.activity_type = 'end'
+GROUP BY a1.machine_id;
+
+ 
 ```
 
 ---
