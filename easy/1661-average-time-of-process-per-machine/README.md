@@ -75,9 +75,9 @@ Machine 2's average time is ((4.512 - 4.100) + (5.000 - 2.500)) / 2 = 1.456
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 69 ms  
+**Runtime:** 78 ms  
 **Memory:** 0B  
-**Submitted:** 2026-08-23T10:27:28.968Z  
+**Submitted:** 2026-08-23T10:29:50.295Z  
 
 ```sql
 # Write your MySQL query statement below
