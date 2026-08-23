@@ -74,21 +74,20 @@ Cat queries poor_ query_percentage is (1 / 3) * 100 = 33.33
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 91 ms  
-**Memory:** 0B  
-**Submitted:** 2026-08-23T10:06:35.391Z  
+**Runtime:** 366 ms (beats 78.48%)  
+**Memory:** 0B (beats 100.00%)  
+**Submitted:** 2026-08-23T10:07:21.780Z  
 
 ```sql
-# Write your MySQL query statement below
-SELECT query_name ,
-ROUND(AVG(rating/position),2) AS quality ,
+# Write your MySQL query statement below
+SELECT query_name ,
+ROUND(AVG(rating/position),2) AS quality ,
 ROUND(AVG(CASE
-                WHEN rating < 3 THEN 1
-                ELSE 0
-            END) * 100, 2) AS poor_query_percentage
-FROM Queries
-GROUP BY query_name ;
-
+                WHEN rating < 3 THEN 1
+                ELSE 0
+            END) * 100, 2) AS poor_query_percentage
+FROM Queries
+GROUP BY query_name ;
 ```
 
 ---
