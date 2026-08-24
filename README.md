@@ -6,9 +6,9 @@
 
 | Metric | Count |
 |--------|-------|
-| Total Solved | 126 |
+| Total Solved | 127 |
 | Easy | 116 |
-| Medium | 10 |
+| Medium | 11 |
 | Hard | 0 |
 | Current Streak | 4 days |
 | Last Synced | 8/24/2026 |
@@ -17,7 +17,7 @@
 
 | Language | Solutions |
 |----------|-----------|
-| SQL | 126 |
+| SQL | 127 |
 
 ---
-*Last updated: 2026-08-24T14:57:46.282Z*
+*Last updated: 2026-08-24T16:57:38.010Z*
