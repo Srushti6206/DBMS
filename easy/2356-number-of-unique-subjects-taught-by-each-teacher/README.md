@@ -61,9 +61,9 @@ Teacher 2:
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 92 ms  
+**Runtime:** 112 ms  
 **Memory:** 0B  
-**Submitted:** 2026-08-24T17:05:56.276Z  
+**Submitted:** 2026-08-24T17:08:06.467Z  
 
 ```sql
 # Write your MySQL query statement below
