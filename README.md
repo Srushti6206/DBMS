@@ -6,18 +6,18 @@
 
 | Metric | Count |
 |--------|-------|
-| Total Solved | 124 |
-| Easy | 114 |
+| Total Solved | 125 |
+| Easy | 115 |
 | Medium | 10 |
 | Hard | 0 |
-| Current Streak | 3 days |
-| Last Synced | 8/23/2026 |
+| Current Streak | 4 days |
+| Last Synced | 8/24/2026 |
 
 ## Languages
 
 | Language | Solutions |
 |----------|-----------|
-| SQL | 124 |
+| SQL | 125 |
 
 ---
-*Last updated: 2026-08-23T13:12:19.903Z*
+*Last updated: 2026-08-24T14:53:36.418Z*
