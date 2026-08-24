@@ -61,19 +61,15 @@ Teacher 2:
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 76 ms  
-**Memory:** 0B  
-**Submitted:** 2026-08-24T17:08:35.984Z  
+**Runtime:** 483 ms (beats 95.37%)  
+**Memory:** 0B (beats 100.00%)  
+**Submitted:** 2026-08-24T17:15:34.276Z  
 
 ```sql
 # Write your MySQL query statement below
-SELECT e1.name from Employee e1
-JOIN Employee e2 
-ON e1.id = e2.managerID
-GROUP BY e1.id , e1.name
-having count(e2.id) >= 5 ;
-
-# Direct report : An employee whose managerId equals that manager's id
+SELECT teacher_id , COUNT(DISTINCT subject_id) AS cnt
+FROM Teacher
+GROUP BY  teacher_id ;
 ```
 
 ---
