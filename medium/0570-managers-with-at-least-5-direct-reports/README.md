@@ -53,21 +53,19 @@ Output:
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 82 ms  
-**Memory:** 0B  
-**Submitted:** 2026-08-24T16:57:34.598Z  
+**Runtime:** 332 ms (beats 93.61%)  
+**Memory:** 0B (beats 100.00%)  
+**Submitted:** 2026-08-24T17:01:49.965Z  
 
 ```sql
-# Write your MySQL query statement below
-SELECT e1.name from Employee e1
-JOIN Employee e2 
-ON e1.id = e2.managerID
-GROUP BY e1.id , e1.name
-having count(e2.id) >= 5 ;
+# Write your MySQL query statement below
+SELECT e1.name from Employee e1
+JOIN Employee e2 
+ON e1.id = e2.managerID
+GROUP BY e1.id , e1.name
+having count(e2.id) >= 5 ;
 
-
-
-
+# Direct report : An employee whose managerId equals that manager's id
 ```
 
 ---
