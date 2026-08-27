@@ -63,16 +63,20 @@ Explanation:
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 118 ms  
-**Memory:** 0B  
-**Submitted:** 2026-08-27T17:42:14.504Z  
+**Runtime:** 661 ms (beats 33.44%)  
+**Memory:** 0B (beats 100.00%)  
+**Submitted:** 2026-08-27T17:47:41.695Z  
 
 ```sql
-# Write your MySQL query statement below
-SELECT employee_id , department_id 
-FROM Employee
-WHERE primary_flag = 'N' ;
-
+# Write your MySQL query statement below
+SELECT employee_id , department_id 
+FROM Employee
+WHERE primary_flag = 'Y'
+UNION
+SELECT employee_id , department_id
+FROM Employee
+GROUP BY employee_id
+HAVING COUNT(*) = 1; ;
 
 ```
 
