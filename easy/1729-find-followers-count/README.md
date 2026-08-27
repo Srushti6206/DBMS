@@ -52,17 +52,16 @@ The followers of 2 are {0,1}
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 112 ms  
-**Memory:** 0B  
-**Submitted:** 2026-08-27T17:31:13.027Z  
+**Runtime:** 644 ms (beats 37.07%)  
+**Memory:** 0B (beats 100.00%)  
+**Submitted:** 2026-08-27T17:31:20.889Z  
 
 ```sql
-# Write your MySQL query statement below
-SELECT user_id , COUNT(follower_id) as followers_count
-FROM Followers
-GROUP BY user_id 
-ORDER BY user_id ;
-
+# Write your MySQL query statement below
+SELECT user_id , COUNT(follower_id) as followers_count
+FROM Followers
+GROUP BY user_id 
+ORDER BY user_id ;
 ```
 
 ---
