@@ -78,14 +78,14 @@ The salary of employee 2 is missing.
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 200 ms  
+**Runtime:** 110 ms  
 **Memory:** 0B  
-**Submitted:** 2026-08-28T17:32:13.938Z  
+**Submitted:** 2026-08-28T17:34:30.718Z  
 
 ```sql
 # Write your MySQL query statement below
 SELECT e.employee_id FROM Employees e
-JOIN Salaries s 
+LEFT JOIN Salaries s 
 ON e.employee_id = s.employee_id 
 WHERE e.name IS NULL OR s.salary IS NULL 
 Order by employee_id ;
