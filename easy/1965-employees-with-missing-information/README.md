@@ -78,9 +78,9 @@ The salary of employee 2 is missing.
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 120 ms  
+**Runtime:** 96 ms  
 **Memory:** 0B  
-**Submitted:** 2026-08-28T17:39:11.556Z  
+**Submitted:** 2026-08-28T17:39:57.889Z  
 
 ```sql
 SELECT e.employee_id FROM Employees e
@@ -88,8 +88,8 @@ LEFT JOIN Salaries s 
 ON e.employee_id = s.employee_id 
 WHERE e.name IS NULL 
 UNION
-SELECT e.employee_id FROM Employees e
-LEFT JOIN Salaries s 
+SELECT s.employee_id FROM Salaries s
+LEFT JOIN Employees e 
 ON e.employee_id = s.employee_id 
 WHERE s.salary IS NULL
 Order by employee_id ;
