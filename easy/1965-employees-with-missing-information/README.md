@@ -78,22 +78,25 @@ The salary of employee 2 is missing.
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 96 ms  
+**Runtime:** 153 ms  
 **Memory:** 0B  
-**Submitted:** 2026-08-28T17:39:57.889Z  
+**Submitted:** 2026-08-28T17:44:34.280Z  
 
 ```sql
-SELECT e.employee_id FROM Employees e
-LEFT JOIN Salaries s 
-ON e.employee_id = s.employee_id 
-WHERE e.name IS NULL 
-UNION
-SELECT s.employee_id FROM Salaries s
-LEFT JOIN Employees e 
-ON e.employee_id = s.employee_id 
-WHERE s.salary IS NULL
-Order by employee_id ;
+FROM Employees e
+SELECT e.employee_id
 # Write your MySQL query statement below
+LEFT JOIN Salaries s
+ON e.employee_id = s.employee_id
+WHERE s.employee_id IS NULL
+
+UNION
+
+SELECT s.employee_id
+FROM Salaries s
+LEFT JOIN Employees e
+    ON s.employee_id = e.employee_id
+WHERE e.employee_id IS NULL
 
 ```
 
