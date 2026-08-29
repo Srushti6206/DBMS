@@ -96,19 +96,18 @@ The Results table is ordered by avg_tokens in descending order, then by user_id 
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 74 ms  
-**Memory:** 0B  
-**Submitted:** 2026-08-29T16:55:15.935Z  
+**Runtime:** 288 ms (beats 85.46%)  
+**Memory:** 0B (beats 100.00%)  
+**Submitted:** 2026-08-29T16:55:25.428Z  
 
 ```sql
-# Write your MySQL query statement below
-SELECT user_id , COUNT(*) AS prompt_count , 
-        ROUND(AVG(tokens), 2)  AS avg_tokens
-FROM prompts
-GROUP BY user_id
-HAVING COUNT(*) >= 3 AND MAX(tokens) > AVG(tokens) 
-ORDER BY avg_tokens DESC , user_id ASC;
-
+# Write your MySQL query statement below
+SELECT user_id , COUNT(*) AS prompt_count , 
+        ROUND(AVG(tokens), 2)  AS avg_tokens
+FROM prompts
+GROUP BY user_id
+HAVING COUNT(*) >= 3 AND MAX(tokens) > AVG(tokens) 
+ORDER BY avg_tokens DESC , user_id ASC;
 ```
 
 ---
