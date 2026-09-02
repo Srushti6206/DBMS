@@ -59,17 +59,16 @@ User 14 did not login in 2020, so we do not include them in the result table.
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 82 ms  
-**Memory:** 0B  
-**Submitted:** 2026-09-02T16:43:13.343Z  
+**Runtime:** 795 ms (beats 26.55%)  
+**Memory:** 0B (beats 100.00%)  
+**Submitted:** 2026-09-02T16:43:23.829Z  
 
 ```sql
-# Write your MySQL query statement below
-SELECT user_id , MAX(time_stamp) AS last_stamp
-WHERE  time_stamp >= '2020-01-01' AND time_stamp < '2021-01-01' 
-
-GROUP BY user_id ;
-FROM Logins
+# Write your MySQL query statement below
+SELECT user_id , MAX(time_stamp) AS last_stamp
+FROM Logins
+WHERE  time_stamp >= '2020-01-01' AND time_stamp < '2021-01-01' 
+GROUP BY user_id ;
 
 
 ```
