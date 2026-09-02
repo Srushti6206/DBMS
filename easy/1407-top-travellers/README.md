@@ -89,9 +89,9 @@ Donald did not have any rides, the distance traveled by him is 0.
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 317 ms  
+**Runtime:** 116 ms  
 **Memory:** 0B  
-**Submitted:** 2026-09-02T16:31:00.665Z  
+**Submitted:** 2026-09-02T16:32:06.565Z  
 
 ```sql
 # Write your MySQL query statement below
@@ -100,7 +100,7 @@ FROM Users u
 JOIN Rides r
 ON u.id = r.user_id 
 GROUP BY u.name 
-ORDER BY r.distance DESC , u.name ASC ;
+ORDER BY SUM(r.distance) DESC , u.name ASC ;
 
 ```
 
