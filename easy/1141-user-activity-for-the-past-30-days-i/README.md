@@ -62,16 +62,18 @@ Explanation: Note that we do not care about days with zero active users.
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 63 ms  
-**Memory:** 0B  
-**Submitted:** 2026-09-02T16:12:27.864Z  
+**Runtime:** 610 ms (beats 23.50%)  
+**Memory:** 0B (beats 100.00%)  
+**Submitted:** 2026-09-02T16:17:06.432Z  
 
 ```sql
-# Write your MySQL query statement below
-SELECT activity_date AS day , COUNT(DISTINCT user_id) AS  active_users
-FROM Activity
-WHERE activity_date BETWEEN '2019-06-28' AND '2019-07-27'
-GROUP BY activity_date ;
+# Write your MySQL query statement below
+SELECT activity_date AS day ,
+COUNT(DISTINCT user_id) AS active_users
+FROM Activity
+WHERE activity_date BETWEEN DATE_SUB('2019-07-27', INTERVAL 29 DAY)
+    AND '2019-07-27'
+GROUP BY activity_date ;
 
 
 ```
