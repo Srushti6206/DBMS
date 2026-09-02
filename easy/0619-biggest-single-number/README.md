@@ -76,18 +76,17 @@ Explanation: There are no single numbers in the input table so we return null.
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 129 ms  
-**Memory:** 0B  
-**Submitted:** 2026-09-02T15:10:08.644Z  
+**Runtime:** 485 ms (beats 44.54%)  
+**Memory:** 0B (beats 100.00%)  
+**Submitted:** 2026-09-02T15:10:15.251Z  
 
 ```sql
-# Write your MySQL query statement below
-SELECT MAX(num) as num FROM 
-(SELECT num FROM MyNumbers
-GROUP BY num
-HAVING  COUNT(num) = 1 )
-AS Singlenum ;
-
+# Write your MySQL query statement below
+SELECT MAX(num) as num FROM 
+(SELECT num FROM MyNumbers
+GROUP BY num
+HAVING  COUNT(num) = 1 )
+AS Singlenum ;
 ```
 
 ---
