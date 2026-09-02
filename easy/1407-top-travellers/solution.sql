@@ -4,4 +4,4 @@ FROM Users u
 JOIN Rides r
 ON u.id = r.user_id 
 GROUP BY u.name 
-ORDER BY r.distance DESC , u.name ASC ;
+ORDER BY SUM(r.distance) DESC , u.name ASC ;
