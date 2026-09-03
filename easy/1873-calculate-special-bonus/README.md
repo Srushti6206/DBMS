@@ -57,16 +57,21 @@ The rest of the employees get a 100% bonus.
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 77 ms  
+**Runtime:** 70 ms  
 **Memory:** 0B  
-**Submitted:** 2026-09-03T17:01:02.431Z  
+**Submitted:** 2026-09-03T17:04:12.163Z  
 
 ```sql
-# Write your MySQL query statement below
-SELECT employee_id , salary * 2 AS  bonus
+SELECT employee_id ,
+       CASE
+           WHEN employee_id % 2 = 1
+           AND name NOT LIKE 'M%'
+           THEN salary
+           ELSE 0
+       END AS bonus
 FROM Employees
-WHERE employee_id % 2 <> 0 
-ORDER BY employee_id ;
+ORDER BY employee_id;
+
 
 
 ```
