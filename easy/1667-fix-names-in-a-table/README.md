@@ -46,16 +46,15 @@ Output:
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 212 ms  
-**Memory:** 0B  
-**Submitted:** 2026-09-03T16:55:05.079Z  
+**Runtime:** 904 ms (beats 13.78%)  
+**Memory:** 0B (beats 100.00%)  
+**Submitted:** 2026-09-03T16:55:36.219Z  
 
 ```sql
-# Write your MySQL query statement below
-SELECT user_id , CONCAT(UPPER(LEFT(name,1)), LOWER(SUBSTRING(name,2))) AS name
-FROM Users 
-ORDER BY user_id ;
-
+# Write your MySQL query statement below
+SELECT user_id , CONCAT(UPPER(LEFT(name,1)), LOWER(SUBSTRING(name,2))) AS name
+FROM Users 
+ORDER BY user_id ;
 ```
 
 ---
