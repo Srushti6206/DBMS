@@ -57,21 +57,21 @@ The rest of the employees get a 100% bonus.
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 70 ms  
-**Memory:** 0B  
-**Submitted:** 2026-09-03T17:04:12.163Z  
+**Runtime:** 823 ms (beats 15.14%)  
+**Memory:** 0B (beats 100.00%)  
+**Submitted:** 2026-09-03T17:04:25.440Z  
 
 ```sql
-SELECT employee_id ,
-       CASE
-           WHEN employee_id % 2 = 1
-           AND name NOT LIKE 'M%'
-           THEN salary
-           ELSE 0
-       END AS bonus
-FROM Employees
-ORDER BY employee_id;
-
+# Write your MySQL query statement below
+SELECT employee_id ,
+       CASE
+           WHEN employee_id % 2 = 1
+           AND name NOT LIKE 'M%'
+           THEN salary
+           ELSE 0
+       END AS bonus
+FROM Employees
+ORDER BY employee_id;
 
 
 ```
