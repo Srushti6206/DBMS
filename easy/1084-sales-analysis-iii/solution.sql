@@ -3,4 +3,6 @@ SELECT p.product_id , p.product_name 
 FROM Product p 
 JOIN Sales s
 ON p.product_id = s.product_id 
-WHERE s.sale_date between '2019-01-01'and '2019-03-31'; 
+HAVING  MIN(s.sale_date) >= '2019-01-01'and
+GROUP BY p.product_id , p.product_name 
+        MAX(s.sale_date) <= '2019-03-31'; 
