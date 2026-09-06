@@ -78,20 +78,19 @@ We return only product 1 as it is the product that was only sold in the spring o
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 104 ms  
-**Memory:** 0B  
-**Submitted:** 2026-09-06T17:34:48.753Z  
+**Runtime:** 1333 ms (beats 41.17%)  
+**Memory:** 0B (beats 100.00%)  
+**Submitted:** 2026-09-06T17:35:02.188Z  
 
 ```sql
-# Write your MySQL query statement below
-SELECT p.product_id , p.product_name 
-FROM Product p 
-JOIN Sales s
-ON p.product_id = s.product_id 
-HAVING  MIN(s.sale_date) >= '2019-01-01'and
-GROUP BY p.product_id , p.product_name 
-        MAX(s.sale_date) <= '2019-03-31'; 
-
+# Write your MySQL query statement below
+SELECT p.product_id , p.product_name 
+FROM Product p 
+JOIN Sales s
+ON p.product_id = s.product_id 
+GROUP BY p.product_id , p.product_name 
+HAVING  MIN(s.sale_date) >= '2019-01-01'and
+        MAX(s.sale_date) <= '2019-03-31'; 
 ```
 
 ---
