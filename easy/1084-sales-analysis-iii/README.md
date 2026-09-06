@@ -78,9 +78,9 @@ We return only product 1 as it is the product that was only sold in the spring o
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 325 ms  
+**Runtime:** 104 ms  
 **Memory:** 0B  
-**Submitted:** 2026-09-06T17:28:12.666Z  
+**Submitted:** 2026-09-06T17:34:48.753Z  
 
 ```sql
 # Write your MySQL query statement below
@@ -88,7 +88,9 @@ SELECT p.product_id , p.product_name 
 FROM Product p 
 JOIN Sales s
 ON p.product_id = s.product_id 
-WHERE s.sale_date between '2019-01-01'and '2019-03-31'; 
+HAVING  MIN(s.sale_date) >= '2019-01-01'and
+GROUP BY p.product_id , p.product_name 
+        MAX(s.sale_date) <= '2019-03-31'; 
 
 ```
 
