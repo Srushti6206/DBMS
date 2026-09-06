@@ -56,18 +56,19 @@ Joziah's manager is employee 6, who left the company because there is no row for
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 82 ms  
+**Runtime:** 110 ms  
 **Memory:** 0B  
-**Submitted:** 2026-09-06T17:48:40.825Z  
+**Submitted:** 2026-09-06T17:53:31.543Z  
 
 ```sql
 # Write your MySQL query statement below
-SELECT e1.employee_id FROM Employees e1
-LEFT JOIN Employees e2
-ON e1.employee_id = e2.manager_id
-where e1.salary < 30000 AND 
-     e2.manager_id IS NULL ;
-
+SELECT employee_id FROM Employees
+WHERE salary < 30000 
+        AND manager_id IS NOT NULL
+        AND manager_id NOT IN (
+        SELECT employee_id
+        FROM Employees)
+ORDER BY employee_id ;
 
 ```
 
