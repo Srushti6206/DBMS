@@ -65,16 +65,15 @@ The mail of user 7 starts with a period.
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 89 ms  
+**Runtime:** 163 ms  
 **Memory:** 0B  
-**Submitted:** 2026-09-08T12:47:28.771Z  
+**Submitted:** 2026-09-08T12:57:47.320Z  
 
 ```sql
-# Write your MySQL query statement below
-SELECT * FROM Users
-WHERE mail REGEXP '^[a-zA-Z][-A-Za-z0-9_.]*@leetcode\\.com$'
-
-ORDER BY user_id ;
+# Write your MySQL query statement below
+SELECT * FROM Users
+WHERE mail REGEXP '^[A-Za-z][-A-Za-z0-9_.]*@leetcode[.]com$'
+ORDER BY user_id;
 
 
 ```
