@@ -1,6 +1,6 @@
 # Write your MySQL query statement below
 SELECT * FROM Users
-WHERE mail REGEXP '^[a-zA-Z][A-Za-z0-9_.#]*@leetcode\\.com$'
+WHERE mail REGEXP '^[a-zA-Z][-A-Za-z#0-9_.]*@leetcode\\.com$'
 
 ORDER BY user_id ;
 
